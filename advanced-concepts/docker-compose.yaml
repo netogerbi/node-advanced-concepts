@@ -1,0 +1,13 @@
+ 
+version: '3.3'
+
+services:
+  app:
+    build: .
+    image: adv-concepts:latest
+    command: nodemon app.js
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    ports: 
+      - "8080:8080"
